@@ -1,0 +1,1 @@
+"""Seed data used by the application services."""

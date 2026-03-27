@@ -1,0 +1,20 @@
+# FastAPI Framework
+fastapi==0.115.5
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+pydantic-settings==2.7.1
+
+# Google Maps Integration
+googlemaps==4.10.0
+
+# OpenAI Integration
+openai==1.59.8
+
+# HTTP Client
+httpx==0.28.1
+
+# Data Processing
+python-multipart==0.0.20
+
+# CORS
+python-dotenv==1.0.1
