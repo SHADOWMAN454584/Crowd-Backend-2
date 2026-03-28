@@ -7,12 +7,23 @@ pushd "%ROOT_DIR%backend" >nul
 
 where vercel >nul 2>nul
 if errorlevel 1 (
-    echo [ERROR] Vercel CLI not found. Install it with: npm install -g vercel
+    where npx >nul 2>nul
+    if errorlevel 1 (
+        echo [ERROR] Vercel CLI not found and npx is unavailable.
+        echo [ERROR] Install Node.js and run: npm install -g vercel
+        popd >nul
+        exit /b 1
+    )
+
+    echo [INFO] Global Vercel CLI not found. Using npx vercel...
+    npx --yes vercel --prod --yes %*
+    set "EXIT_CODE=%ERRORLEVEL%"
+
     popd >nul
-    exit /b 1
+    exit /b %EXIT_CODE%
 )
 
-vercel --prod %*
+vercel --prod --yes %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 popd >nul
