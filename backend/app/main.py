@@ -7,6 +7,7 @@ from app.api.routes.locations import router as locations_router
 from app.api.routes.maps import router as maps_router
 from app.api.routes.predictions import router as predictions_router
 from app.api.routes.realtime import router as realtime_router
+from app.api.routes.smart_route import router as smart_route_router
 from app.core.config import settings
 
 app = FastAPI(
@@ -29,6 +30,7 @@ app.include_router(predictions_router, prefix="/predictions", tags=["predictions
 app.include_router(realtime_router, prefix="/realtime", tags=["realtime"])
 app.include_router(ai_router, prefix="/ai", tags=["ai"])
 app.include_router(maps_router, prefix="/maps", tags=["maps"])
+app.include_router(smart_route_router, prefix="/smart-route", tags=["smart-route"])
 
 
 @app.get("/", tags=["root"])

@@ -162,6 +162,9 @@ Your API will be live at: `https://your-project.vercel.app`
 - `GET /locations` - Get all monitored locations
 - `GET /locations/{location_id}` - Get specific location details
 
+### Smart Route
+- `POST /smart-route/nearby` - Suggest lower-crowd nearby alternatives (default radius 12 km) with fastest-route guidance
+
 ---
 
 ## 🔑 Environment Variables

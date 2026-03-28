@@ -9,6 +9,12 @@ from app.models.ai import (
 )
 from app.models.alert import CrowdAlert
 from app.models.crowd import CrowdData
+from app.models.smart_route import (
+    NearbySmartLocation,
+    SmartRouteNearbyRequest,
+    SmartRouteNearbyResponse,
+    SmartRouteSuggestion,
+)
 from app.models.user import UserModel
 
 __all__ = [
@@ -19,5 +25,9 @@ __all__ = [
     "CrowdPoint",
     "RouteAdviceRequest",
     "RouteAdviceResponse",
+    "NearbySmartLocation",
+    "SmartRouteNearbyRequest",
+    "SmartRouteNearbyResponse",
+    "SmartRouteSuggestion",
     "UserModel",
 ]
