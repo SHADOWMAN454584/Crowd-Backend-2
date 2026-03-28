@@ -176,10 +176,9 @@ curl http://localhost:8000/predictions/bulk?hour=14
 
 ### Deploy to Vercel
 ```bash
-cd backend
 vercel secrets add openai_api_key "your-key"
 vercel secrets add google_maps_api_key "your-key"
-vercel --prod
+deploy-vercel.bat
 ```
 
 ### Connect Flutter App (Local)

@@ -95,9 +95,9 @@ vercel secrets add google_maps_api_key "your-google-maps-key"
 
 ### Step 4: Deploy
 
-From the `backend` directory:
+From the project root directory:
 ```bash
-vercel --prod
+deploy-vercel.bat
 ```
 
 Your API will be live at: `https://your-project.vercel.app`
